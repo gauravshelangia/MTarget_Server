@@ -1,6 +1,8 @@
 <?php
 $dbconn=null;
 global $dbconn;
-$dbconn=pg_connect("host=10.100.88.14 dbname=TITV user=postgres password=password") or die("could not connect!!!");
-
+$dbconn=pg_connect("host=localhost dbname=mtarget user=gaurav password=password") or die("could not connect!!!");
+if($dbconn){
+  //echo "connected to the server ";
+}
 ?>
