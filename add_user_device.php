@@ -1,6 +1,9 @@
 <?php
   require 'db_conn.php';
 
+  // start session
+  session_start();
+
   $userid = $_POST['userid'];
   $username = $_POST['username'];
   $macaddr = $_POST['macaddr'];
@@ -45,5 +48,9 @@
       echo "already exists in the database device details ";
     }
   }
+
+  $_SESSION["userid"] = $userid;
+  $_SESSION["macaddr"] = $macaddr;
+
 
 ?>
