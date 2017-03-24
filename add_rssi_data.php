@@ -12,13 +12,13 @@
   $graphnode = $jsondata['graphnode'];
   $rssi2ghz = $jsondata['rssi']['rssi2ghz'];
   $rssi5ghz = $jsondata['rssi']['rssi5ghz'];
-  
+
   //echo sizeof($rssi2);
   $arr1 = to_pg_array($rssi2ghz);
   $arr2 = to_pg_array($rssi5ghz);
 
   //echo $rssi2ghz;
-  printf("\n");
+  //printf("\n");
   $tstampquery = "select(CURRENT_TIMESTAMP);";
   $result = pg_query($tstampquery);
   $timestamp = pg_fetch_row($result);
